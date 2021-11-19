@@ -1,0 +1,8 @@
+<i 
+    [class.not-liked]="!isLiked" 
+    [class.liked]="isLiked" 
+    (click)="toggle()"
+    class="bi-heart-fill mx-1 align-top" 
+></i> 
+
+{{ totalLikes }}

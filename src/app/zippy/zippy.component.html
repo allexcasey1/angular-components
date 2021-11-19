@@ -1,0 +1,16 @@
+<div class="card">
+    <div class="card-header" [ngClass]="{'zippy-closed' : !isActive}" (click)="onClick()">
+        {{ title }}
+        <i 
+            class="bi float-end" 
+            [ngClass]="{
+                'bi-chevron-up' : isActive,
+                'bi-chevron-down' : !isActive
+            }"
+           
+        ></i>
+    </div>
+    <div class="card-body" [hidden]="!isActive">
+        <ng-content></ng-content>
+    </div>
+</div>

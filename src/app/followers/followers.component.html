@@ -1,0 +1,20 @@
+<div 
+    class="d-flex mb-3 align-items-center"
+    *ngFor="let follower of followers" >
+    <div
+        class="flex-shrink-0">
+        <img 
+            [src]="follower.avatar_url"
+            height="75"
+            class="avatar"
+            />
+    </div>
+        <div class="flex-grow-1 ms-3">
+            <a 
+                [routerLink]="['/followers', follower.login]" 
+                [queryParams]="{page:'1', order: 'newest'}" 
+                class="h5 text-decoration-none">{{ follower.login }}</a> 
+            <br/>
+            <a routerLink="{{follower.html_url}}">{{ follower.html_url }}</a> 
+        </div>
+</div>

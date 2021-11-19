@@ -1,0 +1,12 @@
+
+.bi-heart-fill:hover {
+    cursor: pointer;
+}
+
+.not-liked{
+    color: #ccc;
+}
+
+.liked {
+    color: deeppink;
+}
